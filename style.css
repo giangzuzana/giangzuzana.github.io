@@ -1,0 +1,57 @@
+@viewport {	width: device-width;	}
+html {	height: 100%;  	margin:0px; padding:0px; border:0px;	}
+body {	height: 100%;	margin:0px;	padding:0px; border:0px;
+	background:white;	color:#333;	font-size:1em;
+	font-family: 'Trebuchet MS', arial, helvetica, sans-serif, courier;
+	border:0px solid red;
+}
+a, a:visited, a img	{ text-decoration:none; color:orange; 	}
+a:hover { color:orange;   text-shadow: 2px 2px 3px rgba(150, 150, 150, 1);	}
+.indent { margin-left: 3em; }
+
+h3, #logo, #menu {	font-family: 'Shadows Into Light Two', arial, helvetica, sans-serif;	}
+h3, #menu {	color:black;	font-size:1.2em;	font-weight:bold;	text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);	}
+#content {	width:100%;	}
+#photo { 	 width:90%; min-width:100px; max-width:150px; margin:0.5em 0 0 0.5em; border:0;	}
+#logo {	 margin-bottom:1em; font-size:1.1em; color:white;     text-shadow:2px 2px 3px rgba(150, 150, 150, 1);	}
+#name {	 color:black;	}
+#page {	 clear:both;	}
+
+/* MENU navigation */
+#contact a.contact, #cv a.cv, 
+#project a.project, #publication a.publication, #software a.software,
+#work a.work, #calendar a.calendar
+	{	color:red;	text-shadow: 2px 2px 3px rgba(150, 150, 150, 1);	}
+
+/* WRAPPER DIV */
+@media screen and (min-width:600px) {
+	#main {	float:left;	width:80%;	min-width:400px; padding-left:2em;	}
+	#menu {	clear:both;	float:left;	width:15%;	 max-width:150px;	}
+	#logo {	text-align:center;	}
+	a.nav, a.nav:link, a.nav:visited {
+		display:block;	float:left;	width:100%;	margin-bottom:1.5em;	color:#333;;	text-align:center; }
+}
+
+@media screen and (max-width:600px) {
+	#main {	clear:both;	float:left;		width:100%;	}
+	#menu {	clear:both;	float:left;		width:100%;	}
+	#logo {	text-align:right;	margin:0.5em 0.5em 0.5em 0;	}
+	#photo {	float:left;	max-width:140px;	}
+	#menulinks	{	float:right;	max-width:150px;	border: 0px solid red;	}
+	a.nav, a.nav:link, a.nav:visited {
+		display:block;	float:right;	width:100%;	margin:0 0.5em 0.5em 0;	color:#333;	text-align:right;
+	}
+}
+
+/* LUNAR CALENDAR */
+table	{ clear:both;		}
+th		{ font-weight:bold;	}
+td		{ text-align:center;	width:10%;			}
+td.title 	{ background:rgba(255,165,0,0.20);		}
+td.day		{ background:rgba(200,200,200,0.20);	}
+td.weekend 	{ background:rgba(200,200,200,0.50);	}
+td.today 	{ background:rgba(255,165,0,0.20);		}
+td.newyear	{ background:rgba(255,160,160,0.65);	}
+td.timezone 	{ background:rgba(255,255,255,0.65);	}
+i.lunar		{ color:#aaa;	}
+
