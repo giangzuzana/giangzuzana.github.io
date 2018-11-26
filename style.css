@@ -1,3 +1,4 @@
+@import url('//fonts.googleapis.com/css?family=Shadows+Into+Light+Two')
 @viewport {	width: device-width;	}
 html {	height: 100%;  	margin:0px; padding:0px; border:0px;	}
 body {	height: 100%;	margin:0px;	padding:0px; border:0px;
@@ -9,7 +10,7 @@ a, a:visited, a img	{ text-decoration:none; color:orange; 	}
 a:hover { color:orange;   text-shadow: 2px 2px 3px rgba(150, 150, 150, 1);	}
 .indent { margin-left: 3em; }
 
-h3, #logo, #menu {	font-family: 'Trebuchet MS', arial, helvetica, sans-serif;	}
+h3, #logo, #menu {	font-family: 'Shadows Into Light Two', arial, helvetica, sans-serif;	}
 h3, #menu {	color:black;	font-size:1.1em;	font-weight:bold;	text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);	}
 #content {	width:100%;	}
 #photo { 	 width:90%; min-width:100px; max-width:150px; margin:0.5em 0 0 0.5em; border:0;	}
