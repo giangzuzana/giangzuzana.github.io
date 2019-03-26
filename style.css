@@ -8,7 +8,7 @@ body {	height: 100%;	margin:0px;	padding:0px; border:0px;
 a, a:visited, a img	{ text-decoration:none; color:orange; 	}
 a:hover { color:orange;   text-shadow: 2px 2px 3px rgba(150, 150, 150, 1);	}
 .indent { margin-left: 3em; }
-.cite { font-family: 'Mrs Saint Delafield', cursive;	} 
+.cite { font-family: 'Mrs Saint Delafield', cursive;	font-size:2em;	} 
 
 h3, #logo, #menu {	font-family: 'Kaushan Script', cursive, arial, helvetica, sans-serif;	}
 h3, #menu {	color:black;	font-size:1.1em;	font-weight:bold;	text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);	}
