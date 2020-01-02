@@ -5,9 +5,12 @@ body {	height: 100%;	margin:0px;	padding:0px; border:0px;
 	font-family: 'Trebuchet MS', arial, helvetica, sans-serif, courier;
 	border:0px solid red;
 }
+/*
 a, a:visited, a img	{ text-decoration:none; color:orange; 	}
-/* a:hover { color:orange;   text-shadow: 2px 2px 3px rgba(150, 150, 150, 1);	}*/
-a:hover { color:#0070b8;   text-shadow: 2px 2px 3px rgba(150, 150, 150, 1);   }
+a:hover { color:orange;   text-shadow: 2px 2px 3px rgba(150, 150, 150, 1);	}
+*/
+a, a:visited, a img     { text-decoration:none; color:#0070b8;   }
+a:hover { color:#0070b8;   text-shadow: 2px 2px 3px rgba(200, 200, 200, 1);   }
 .indent  { margin-left: 3em; }
 .cite { font-family: 'Bilbo Swash Caps', cursive;	font-size:1.3em;	} 
 .verticalcenter {
