@@ -29,10 +29,9 @@ h3, #menu {	color:black;	font-size:1.1em;	font-weight:bold;	text-shadow: 1px 1px
 #cv a.cv, 
 #publication a.publication, 
 #project a.project, 
-#review a.review,
 #software a.software,
 #soft a.soft,
-#work a.work, 
+#phd a.phd,
 #calendar a.calendar
 	{	color:red;	text-shadow: 2px 2px 3px rgba(150, 150, 150, 1);	}
 
