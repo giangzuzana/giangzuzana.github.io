@@ -2,7 +2,7 @@
 html {	height: 100%;  	margin:0px; padding:0px; border:0px;	}
 body {	height: 100%;	margin:0px;	padding:0px; border:0px;
 	background:white;	color:#333;	font-size:1.0em;
-	font-family: 'Poppins', 'Trebuchet MS', arial, helvetica, sans-serif, courier;
+	font-family: 'Trebuchet MS', arial, helvetica, sans-serif, courier;
 	border:0px solid red;
 }
 a, a:visited, a img	{ text-decoration:none; color:orange; 	}
