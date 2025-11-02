@@ -20,6 +20,18 @@ a:hover { color:#0070b8;   text-shadow: 2px 2px 3px rgba(200, 200, 200, 1);   }
 h3, #logo, #menu {	font-family: 'Kaushan Script', cursive, arial, helvetica, sans-serif;	}
 h3, #menu {	color:black;	font-size:1.1em;	font-weight:bold;	text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);	}
 #content {	width:100%;	}
+#photo {
+  width: 120px;
+  min-width: 100px;
+  max-width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0.5em 0 0 0.5em;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
 #photo 	{ 	width:120px; 
 		min-width:100px; max-width:150px;
 		display: block; margin-left: auto; margin-right: auto; 
