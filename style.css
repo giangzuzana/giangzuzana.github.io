@@ -29,7 +29,7 @@ h3, #menu {	color:black;	font-size:1.1em;	font-weight:bold;	text-shadow: 1px 1px
   margin-right: auto;
   margin: 0.5em 0 0 0.5em;
   border: 0;
-  border-radius: 10px;
+  border-radius: 60px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 #photo 	{ 	width:120px; 
