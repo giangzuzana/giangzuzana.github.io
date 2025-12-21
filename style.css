@@ -1,79 +1,185 @@
-@viewport {	width: device-width;	}
-html {	height: 100%;  	margin:0px; padding:0px; border:0px;	}
-body {	height: 100%;	margin:0px;	padding:0px; border:0px;
-	background:white;	color:#333;	font-size:1.0em;
-	font-family: 'Trebuchet MS', arial, helvetica, sans-serif, courier;
-	border:0px solid red;
-}
-a, a:visited, a img	{ text-decoration:none; color:orange; 	}
-/* a:hover { color:orange;   text-shadow: 2px 2px 3px rgba(150, 150, 150, 1);	}  */
-a:hover { color:#0070b8;   text-shadow: 2px 2px 3px rgba(200, 200, 200, 1);   }
-.blue { color:#0070b8;   text-shadow: 2px 2px 3px rgba(200, 200, 200, 1);   }
-.indent  { margin-left: 3em; }
-.cite { font-family: 'Bilbo Swash Caps', cursive;	font-size:1.3em;	} 
-.verticalcenter {
-    display: table-cell;
-    height: 250px;
-    vertical-align: middle;
+/* ===== Base / Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-h3, #logo, #menu {	font-family: 'Kaushan Script', cursive, arial, helvetica, sans-serif;	}
-h3, #menu {	color:black;	font-size:1.1em;	font-weight:bold;	text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);	}
-#content {	width:100%;	}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  font: 16px/1.5 "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Links */
+a {
+  color: orange;
+  text-decoration: none;
+}
+a:hover {
+  color: #0070b8;
+  text-shadow: 2px 2px 3px rgba(200, 200, 200, 1);
+}
+
+.blue {
+  color: #0070b8;
+  text-shadow: 2px 2px 3px rgba(200, 200, 200, 1);
+}
+
+.indent {
+  margin-left: 3em;
+}
+
+.cite {
+  font-family: "Bilbo Swash Caps", cursive;
+  font-size: 1.3em;
+}
+
+/* Headings + logo/menu font */
+h3, #logo, #menu {
+  font-family: "Kaushan Script", cursive, Arial, Helvetica, sans-serif;
+}
+h3 {
+  margin: 1.2rem 0 0.6rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000;
+  text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+}
+
+/* ===== Layout ===== */
+/* Use a responsive sidebar layout without floats */
+#content {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1rem;
+}
+
+/* Left menu (sidebar) */
+#menu {
+  flex: 0 0 200px;         /* sidebar width */
+  max-width: 220px;
+}
+
+#menulinks {
+  position: sticky;
+  top: 1rem;
+  padding: 0.5rem;
+}
+
+/* Main content area */
+#main {
+  flex: 1 1 auto;
+  min-width: 0;            /* prevents overflow in flex layouts */
+}
+
+/* ===== Menu content ===== */
 #photo {
   width: 128px;
-  min-width: 100px;
-  max-width: 128px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin: 20px 0 0 20px;
-  border: 0;
-  border-radius: 64px;
+  border-radius: 999px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  display: block;
+  margin: 0 auto 0.75rem;  /* centered */
+  border: 0;
 }
-#logo {	margin-bottom:1em; font-size:1.1em; color:white;     text-shadow:2px 2px 3px rgba(150, 150, 150, 1);	}
-#name {	color:black;	}
-#page {	clear:both;	}
 
-/* MENU navigation */
-#contact a.contact, 
-#cv a.cv, 
-#publication a.publication, 
-#project a.project, 
+#logo {
+  text-align: center;
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  color: #111;
+  text-shadow: 2px 2px 3px rgba(150, 150, 150, 1);
+  letter-spacing: 0.03em;
+}
+
+/* Menu links */
+a.nav {
+  display: block;
+  padding: 0.55rem 0.75rem;
+  margin: 0 0 0.5rem;
+  border-radius: 10px;
+  color: #333;
+  text-align: center;
+  white-space: nowrap;
+}
+
+a.nav:hover {
+  background: rgba(0, 112, 184, 0.08);
+  text-shadow: none; /* cleaner for nav hover */
+}
+
+/* Optional: active page highlight based on your body id (body id="cv", etc.) */
+#cv a.cv,
 #software a.software,
 #soft a.soft,
+#publication a.publication,
+#project a.project,
 #phd a.phd,
-
-/* WRAPPER DIV */
-@media screen and (min-width:600px) {
-	#main {	float:left;	width:80%;	min-width:400px; padding-left:2em;	}
-	#menu {	clear:both;	float:left;	width:15%;	 max-width:150px;	}
-	#logo {	text-align:center;	}
-	a.nav, a.nav:link, a.nav:visited {
-		display:block;	float:left;	width:100%;	margin-bottom:1.5em;	color:#333;;	text-align:center; }
+#contact a.contact {
+  background: rgba(255, 165, 0, 0.18);
+  font-weight: 700;
 }
 
-@media screen and (max-width:600px) {
-	#main {	clear:both;	float:left;		width:100%;	}
-	#menu {	clear:both;	float:left;		width:100%;	}
-	#logo {	text-align:right;	margin:0.5em 0.5em 0.5em 0;	}
-	#photo {	float:left;	max-width:140px;	}
-	#menulinks	{	float:right;	max-width:150px;	border: 0px solid red;	}
-	a.nav, a.nav:link, a.nav:visited {
-		display:block;	float:right;	width:100%;	margin:0 0.5em 0.5em 0;	color:#333;	text-align:right;
-	}
+/* ===== Responsive: narrow windows / mobile ===== */
+@media (max-width: 720px) {
+  #content {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  #menu {
+    flex: 0 0 auto;
+    max-width: none;
+    width: 100%;
+  }
+
+  #menulinks {
+    position: static;       /* no sticky on mobile */
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0;
+  }
+
+  #photo {
+    width: 96px;
+    margin: 0;
+    flex: 0 0 auto;
+  }
+
+  /* Right-side stack of logo + links */
+  #logo {
+    text-align: left;
+    margin: 0 0 0.25rem;
+  }
+
+  /* Put nav links in a wrapping row grid */
+  a.nav {
+    display: inline-block;
+    margin: 0.25rem 0.25rem 0 0;
+    text-align: center;
+  }
+
+  /* Keep menu content from getting too tall */
+  #menulinks {
+    flex-wrap: wrap;
+  }
 }
 
-/* LUNAR CALENDAR */
-table	{ clear:both;		}
-th		{ font-weight:bold;	}
-td		{ text-align:center;	width:10%;			}
-td.title 	{ background:rgba(255,165,0,0.20);		}
-td.day		{ background:rgba(200,200,200,0.20);	}
-td.weekend 	{ background:rgba(200,200,200,0.50);	}
-td.today 	{ background:rgba(255,165,0,0.20);		}
-td.newyear	{ background:rgba(255,160,160,0.65);	}
-td.timezone 	{ background:rgba(255,255,255,0.65);	}
-i.lunar		{ color:#aaa;	}
-
+/* Optional: reduce indent on small screens */
+@media (max-width: 720px) {
+  .indent { margin-left: 0.75rem; }
+}
