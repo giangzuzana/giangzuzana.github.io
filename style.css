@@ -116,12 +116,13 @@ a.nav {
   white-space: nowrap;
 }
 
+/* Hover = orange */
 a.nav:hover {
-  background: rgba(0, 112, 184, 0.08);
-  text-shadow: none; /* cleaner for nav hover */
+  background: rgba(255, 165, 0, 0.18);
+  text-shadow: none;
 }
 
-/* Optional: active page highlight based on your body id (body id="cv", etc.) */
+/* Selected / active page = blue */
 #cv a.cv,
 #software a.software,
 #soft a.soft,
@@ -129,7 +130,7 @@ a.nav:hover {
 #project a.project,
 #phd a.phd,
 #contact a.contact {
-  background: rgba(255, 165, 0, 0.18);
+  background: rgba(0, 112, 184, 0.08);
   font-weight: 700;
 }
 
